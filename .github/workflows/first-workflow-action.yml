@@ -6,6 +6,10 @@ jobs:
     steps:
     - name: test step
       run: echo "Hi. This is the first step"
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: first-artifact
   
   test-second-job:
     runs-on: windows-latest
