@@ -1,7 +1,7 @@
 name: Test & Deploy
 on: [push, workflow_dispatch]
 jobs:
-  test-job:
+  lint-job:
     runs-on: ubuntu-latest
     steps:
       - name: Get completed
@@ -16,3 +16,17 @@ jobs:
           echo "Linting the code..."
           npm run lint
           echo "Linting completed successfully."
+  
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Dependencies
+        run: |
+          echo "Installing dependencies..."
+          npm install
+          echo "Dependencies installed successfully."
+      - name: Run Tests
+        run: |
+          echo "Running tests..."
+          npm test
+          echo "Tests completed successfully."
