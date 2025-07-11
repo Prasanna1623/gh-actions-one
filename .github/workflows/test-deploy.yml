@@ -28,5 +28,5 @@ jobs:
       - name: Run Tests
         run: |
           echo "Running tests..."
-          npm test
+          npm run test
           echo "Tests completed successfully."
