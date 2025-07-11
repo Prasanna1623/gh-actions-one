@@ -6,8 +6,13 @@ jobs:
     steps:
       - name: Get completed
         uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: |
+          echo "Installing dependencies..."
+          npm install
+          echo "Dependencies installed successfully."
       - name: Execute Lint
         run: |
           echo "Linting the code..."
-          npm lint
+          npm run lint
           echo "Linting completed successfully."
