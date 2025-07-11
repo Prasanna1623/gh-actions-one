@@ -19,5 +19,14 @@ jobs:
         run: |
           echo "execution completed!"
           echo "Thank You!!"
-  
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: first-artifact
+      - name: Display artifact content
+        run: |
+          echo "Content of the artifact:"
+          cat artifact.txt
+          echo "Artifact content displayed successfully."
+    
     
