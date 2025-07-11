@@ -7,7 +7,7 @@ jobs:
       - name: Get completed
         uses: actions/checkout@v2
       - name: Caching dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with: 
           path: ~/.npm
           key: "cache-${{ hashFiles('**/package-lock.json') }}"
@@ -29,7 +29,7 @@ jobs:
       - name: Get completed
         uses: actions/checkout@v2
       - name: Caching dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with: 
           path: ~/.npm
           key: "cache-${{ hashFiles('**/package-lock.json') }}"
@@ -50,7 +50,7 @@ jobs:
       - name: Get completed
         uses: actions/checkout@v2
       - name: Caching dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with: 
           path: ~/.npm
           key: "cache-${{ hashFiles('**/package-lock.json') }}"
