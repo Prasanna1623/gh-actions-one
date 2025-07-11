@@ -1,0 +1,13 @@
+name: Test & Deploy
+on: push
+jobs:
+  test-job:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Get completed
+      uses: actions/checkout@v2
+    - name: Execute Lint
+      run: |
+        echo "Linting the code..."
+        eslint --ext .jsx --fix src
+        echo "Linting completed successfully."
