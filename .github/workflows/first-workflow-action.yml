@@ -1,17 +1,7 @@
 name: first-workflow
 on: [workflow_dispatch]
 jobs:
-  test-first-job:
-    runs-on: ubuntu-latest
-    steps:
-    - name: test step
-      run: echo "Hi. This is the first step" >> artifact.txt
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: first-artifact
-        path: ./artifact.txt
-  
+
   test-second-job:
     runs-on: windows-latest
     steps:
@@ -28,5 +18,18 @@ jobs:
           echo "Content of the artifact:"
           cat artifact.txt
           echo "Artifact content displayed successfully."
+
+  test-first-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: test step
+      run: echo "Hi. This is the first step" >> artifact.txt
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: first-artifact
+        path: ./artifact.txt
+  
+  
     
     
