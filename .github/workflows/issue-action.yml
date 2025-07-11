@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Issue Details
         run: |
-          echo ${{github.event.issue}}
+          echo ${{ toJson(github.event.issue) }}
 
