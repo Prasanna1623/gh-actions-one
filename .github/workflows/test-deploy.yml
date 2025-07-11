@@ -9,5 +9,5 @@ jobs:
     - name: Execute Lint
       run: |
         echo "Linting the code..."
-        eslint --ext .jsx --fix src
+        npm run lint
         echo "Linting completed successfully."
